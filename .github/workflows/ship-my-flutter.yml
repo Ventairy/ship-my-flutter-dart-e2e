@@ -40,9 +40,6 @@ jobs:
         uses: Ventairy/ship-my-flutter-action@c285341d48f554411d18c0245e2721ce4710683e
         with:
           phase: plan
-          # The Ventairy organization locks the default GITHUB_TOKEN to
-          # read-only. This exercises the documented GitHub App/PAT fallback.
-          github-token: ${{ secrets.SHIP_MY_FLUTTER_E2E_TOKEN }}
 
       - name: Record the decision without invoking Apple
         env:
