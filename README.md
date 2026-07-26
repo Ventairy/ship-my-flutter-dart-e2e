@@ -18,6 +18,6 @@ Verified artifacts:
 
 The current hosted non-Apple gate pins core commit
 `8f6f853a01237369ceda79660b62acf293a41857` and Action commit
-`decd79e2feef1488b67eb7d145d5999baf966a31`. These immutable references make
+`fe7778a977b8230bb0e1242374b264758938d9e7`. These immutable references make
 the verified pair reproducible without implying that pub.dev or the floating
 `v1` Action tag has been published.
