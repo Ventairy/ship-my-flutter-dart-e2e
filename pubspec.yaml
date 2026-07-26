@@ -1,0 +1,13 @@
+name: ship_my_flutter_dart_e2e
+description: Disposable hosted workflow fixture for ship-my-flutter.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.10.0 <4.0.0"
+
+dev_dependencies:
+  ship_my_flutter:
+    git:
+      url: https://github.com/Ventairy/ship-my-flutter.git
+      ref: dadddd96a1c8434684a508991cb3d15e238b2014
