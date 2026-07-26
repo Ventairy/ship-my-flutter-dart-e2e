@@ -1,0 +1,59 @@
+name: Ship my Flutter E2E
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ship-my-flutter-e2e-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  non-apple-workflow:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: dart-lang/setup-dart@65eb853c7ba17dde3be364c3d2858773e7144260 # v1.7.2
+        with:
+          sdk: 3.10.0
+
+      - name: Install the public Dart package
+        run: dart pub get --enforce-lockfile
+
+      - name: Exercise the CLI and reusable Dart API
+        run: |
+          dart run ship_my_flutter validate
+          dart run ship_my_flutter plan
+          dart run ship_my_flutter:open_pr --help
+          dart run example/custom_workflow.dart
+
+      - id: ship
+        name: Exercise the thin GitHub Action adapter
+        uses: Ventairy/ship-my-flutter-action@c285341d48f554411d18c0245e2721ce4710683e
+        with:
+          phase: plan
+
+      - name: Record the decision without invoking Apple
+        env:
+          PHASE: ${{ steps.ship.outputs.phase }}
+          BRANCH: ${{ steps.ship.outputs.branch }}
+          VERSION: ${{ steps.ship.outputs.version }}
+        run: |
+          printf 'phase=%s\nbranch=%s\nversion=%s\n' "$PHASE" "$BRANCH" "$VERSION"
+          {
+            printf '## ship-my-flutter decision\n\n'
+            printf -- '- phase: `%s`\n' "$PHASE"
+            printf -- '- branch: `%s`\n' "$BRANCH"
+            printf -- '- version: `%s`\n' "$VERSION"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # This fixture intentionally has no candidate or promote job. Those
+      # phases touch App Store Connect and are outside this repository's scope.

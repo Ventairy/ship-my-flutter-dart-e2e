@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Ventairy/ship-my-flutter/main/schemas/config.schema.json
+
+schemaVersion: 1
+targetBranch: main
+releaseBranchPrefix: ship-my-flutter
+hooks: {}
+platforms:
+  ios:
+    enabled: true
+    projectPath: .
+    bundleId: "com.example.shipmyfluttere2e"
+    buildArgs: []
+    testflight:
+      groups: []
+      waitTimeoutMinutes: 45
+    appStore:
+      mode: upload-only
+      releaseType: manual
