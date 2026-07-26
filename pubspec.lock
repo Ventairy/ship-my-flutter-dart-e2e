@@ -117,8 +117,8 @@ packages:
     dependency: "direct dev"
     description:
       path: "."
-      ref: "8f6f853a01237369ceda79660b62acf293a41857"
-      resolved-ref: "8f6f853a01237369ceda79660b62acf293a41857"
+      ref: "0302a7962bc94c67d04ea383240f9763821af94a"
+      resolved-ref: "0302a7962bc94c67d04ea383240f9763821af94a"
       url: "https://github.com/Ventairy/ship-my-flutter.git"
     source: git
     version: "0.1.0"

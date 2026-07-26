@@ -17,7 +17,7 @@ Verified artifacts:
 - [iOS v1.1.0 GitHub Release](https://github.com/Ventairy/ship-my-flutter-dart-e2e/releases/tag/ios-v1.1.0)
 
 The current hosted non-Apple gate pins core commit
-`8f6f853a01237369ceda79660b62acf293a41857` and Action commit
-`fe7778a977b8230bb0e1242374b264758938d9e7`. These immutable references make
+`0302a7962bc94c67d04ea383240f9763821af94a` and Action commit
+`e9e97721875041d0946398ca53556b8b3f161c04`. These immutable references make
 the verified pair reproducible without implying that pub.dev or the floating
 `v1` Action tag has been published.
