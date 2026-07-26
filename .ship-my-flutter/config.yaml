@@ -9,8 +9,6 @@ platforms:
     enabled: true
     project_path: .
     bundle_id: "com.example.shipmyfluttere2e"
-    build_command: flutter build ipa --release
-    artifact_path: build/ios/ipa
     testflight:
       groups: []
       wait_timeout_minutes: 45

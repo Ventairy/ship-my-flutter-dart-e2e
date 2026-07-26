@@ -17,12 +17,13 @@ Verified artifacts:
 - [iOS v1.1.0 GitHub Release](https://github.com/Ventairy/ship-my-flutter-dart-e2e/releases/tag/ios-v1.1.0)
 
 The current hosted non-Apple gate pins core commit
-`056194a92342b43b8aba8034fdb0c34264291341` and Action commit
-`5a1451d33709c81646e72230193aa6b956531093`. These immutable references make
+`db35d160e9d6f53061e8193479a0083593f0d3b0` and Action commit
+`28fb0cf9f8230a8122abd06d72fc7db85172b19b`. These immutable references make
 the verified pair reproducible without implying that pub.dev or the floating
 `v1` Action tag has been published.
 
-The fixture uses schema-v2 snake_case YAML and a shell-string
-`build_command`. Its hosted workflow does not install Flutter: only the
-non-Apple `plan` phase runs, proving that the Action's isolated Dart runtime
-does not impose a Flutter SDK on planning jobs.
+The fixture uses schema-v2 snake_case YAML and deliberately omits
+`build_command` and `artifact_path`, exercising their standard Flutter
+defaults. Its hosted workflow does not install Flutter: only the non-Apple
+`plan` phase runs, proving that the Action's isolated Dart runtime does not
+impose a Flutter SDK on planning jobs.
