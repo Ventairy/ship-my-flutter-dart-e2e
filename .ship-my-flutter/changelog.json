@@ -5,9 +5,9 @@
       "releases": {
         "1.1.0": {
           "version": "1.1.0",
-          "preparedAt": "2026-07-27T02:07:23.872573Z",
+          "preparedAt": "2026-07-27T02:09:04.810906Z",
           "baseSha": "52407170466ab74f2dd34e73f65b90c6195d0138",
-          "headSha": "dc73ebd6f604522e8f7a1c623b69b5fd87414613",
+          "headSha": "01f747b7fe4734f5a0aecd2a75c09ec6b4420027",
           "changes": [
             {
               "sha": "e61ce7f5dd8d7ed1d6955724f42cdf1dfaf52b2b",
