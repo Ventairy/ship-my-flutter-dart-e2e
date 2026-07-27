@@ -40,6 +40,7 @@ jobs:
         uses: Ventairy/ship-my-flutter-action@5ab2eac9d16a08d8d1d76b30a8b1cf50ee0dc630
         with:
           phase: plan
+          github-token: ${{ secrets.SHIP_MY_FLUTTER_GITHUB_TOKEN }}
 
       - name: Record the decision without invoking Apple
         env:
