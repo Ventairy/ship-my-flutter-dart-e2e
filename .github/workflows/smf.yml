@@ -1,11 +1,10 @@
-name: Ship my Flutter E2E
+name: SMF E2E
 
 on:
-  push:
   workflow_dispatch:
 
 concurrency:
-  group: ship-my-flutter-e2e-${{ github.ref }}
+  group: smf-e2e-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -30,17 +29,16 @@ jobs:
 
       - name: Exercise the CLI and reusable Dart API
         run: |
-          dart run ship_my_flutter validate
-          dart run ship_my_flutter plan
-          dart run ship_my_flutter:open_pr --help
+          dart run smf validate
+          dart run smf plan
+          dart run smf:open_pr --help
           dart run example/custom_workflow.dart
 
       - id: ship
         name: Exercise the thin GitHub Action adapter
-        uses: Ventairy/ship-my-flutter-action@1fa5a0b7c4c814b47b9ecdd49ed45ec782e15a95
+        uses: Ventairy/smf-action@8971b68a66ae0ecc05d3d0f059a4b3b5c9126379
         with:
           phase: pull-request
-          github-token: ${{ secrets.SHIP_MY_FLUTTER_GITHUB_TOKEN }}
 
       - name: Record the decision without invoking Apple
         env:
@@ -50,7 +48,7 @@ jobs:
         run: |
           printf 'phase=%s\nbranch=%s\nversion=%s\n' "$PHASE" "$BRANCH" "$VERSION"
           {
-            printf '## ship-my-flutter decision\n\n'
+            printf '## SMF decision\n\n'
             printf -- '- phase: `%s`\n' "$PHASE"
             printf -- '- branch: `%s`\n' "$BRANCH"
             printf -- '- version: `%s`\n' "$VERSION"

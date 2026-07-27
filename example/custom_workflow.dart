@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:ship_my_flutter/ship_my_flutter.dart';
+import 'package:smf/smf.dart';
 
 Future<void> main() async {
   const root = '.';

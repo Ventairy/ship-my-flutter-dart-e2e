@@ -1,5 +1,5 @@
-name: ship_my_flutter_dart_e2e
-description: Disposable hosted workflow fixture for ship-my-flutter.
+name: smf_e2e
+description: Disposable hosted workflow fixture for SMF.
 publish_to: none
 version: 1.0.0+1
 
@@ -7,7 +7,7 @@ environment:
   sdk: ">=3.10.0 <4.0.0"
 
 dev_dependencies:
-  ship_my_flutter:
+  smf:
     git:
-      url: https://github.com/Ventairy/ship-my-flutter.git
-      ref: 0fbabbde78343185e7936575021ebabff6377c8a
+      url: https://github.com/Ventairy/smf.git
+      ref: 7fa60bfff690b78a9e049e0c277ca8a12358e91b

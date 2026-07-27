@@ -129,13 +129,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
-  ship_my_flutter:
+  smf:
     dependency: "direct dev"
     description:
       path: "."
-      ref: "0fbabbde78343185e7936575021ebabff6377c8a"
-      resolved-ref: "0fbabbde78343185e7936575021ebabff6377c8a"
-      url: "https://github.com/Ventairy/ship-my-flutter.git"
+      ref: "7fa60bfff690b78a9e049e0c277ca8a12358e91b"
+      resolved-ref: "7fa60bfff690b78a9e049e0c277ca8a12358e91b"
+      url: "https://github.com/Ventairy/smf.git"
     source: git
     version: "0.1.0"
   source_span:
