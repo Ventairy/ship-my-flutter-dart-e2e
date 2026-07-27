@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:smf/smf.dart';
+import 'package:smf_hooks/smf_hooks.dart';
 
 final class RecordBeforeCreatePrHook extends SmfHook {
   @override

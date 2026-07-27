@@ -1,6 +1,7 @@
 import 'dart:convert';
 
-import 'package:smf/smf.dart';
+import 'package:smf_apple/smf_apple.dart';
+import 'package:smf_engine/smf_engine.dart';
 
 Future<void> main() async {
   const root = '.';

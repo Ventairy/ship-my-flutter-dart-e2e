@@ -1,7 +1,7 @@
 # SMF E2E fixture
 
-This disposable repository exercises the public SMF Dart package and GitHub
-Action against a real hosted repository.
+This disposable repository exercises the public SMF packages and GitHub Action
+against a real hosted repository.
 
 It intentionally has no `release-candidate` or `ship` job. The workflow tests
 configuration discovery, CLI commands, the reusable Dart API, the typed
@@ -10,8 +10,8 @@ building, uploading, or submitting anything to Apple.
 
 The fixture pins immutable sources:
 
-- SMF core `cf826cb13267a4795b036b28c4168e4c56c34287`;
-- SMF Action `988c687004c9ef9304d4b4fcb45c7d3c8446a24c`.
+- SMF workspace `1e3d02926d4efa317744ddeb885abe68022e92f2`;
+- SMF Action `b5a613feda6e78c58d1b5c8a01da0c8ca6a4d0bf`.
 
 The Flutter-app-shaped project keeps its only configuration at
 `smf/config.yaml`. Both the CLI and Action discover it automatically from the
@@ -33,6 +33,6 @@ the higher minor bump.
 
 The organization fixes the default workflow token to read-only. The hosted
 manual workflow therefore verifies the composite Action's setup and no-op path,
-while release-PR mutation is exercised through the same final public core using
+while release-PR mutation is exercised through the same final public engine using
 a local authenticated GitHub session. No token is stored in this repository,
 and no Apple or release-signing credentials belong here.

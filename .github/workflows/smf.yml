@@ -29,14 +29,14 @@ jobs:
 
       - name: Exercise the CLI and reusable Dart API
         run: |
-          dart run smf validate
-          dart run smf plan
-          dart run smf:open_pr --help
+          dart run smf_cli:smf validate
+          dart run smf_cli:smf plan
+          dart run smf_cli:smf open-pr --help
           dart run example/custom_workflow.dart
 
       - id: ship
         name: Exercise the thin GitHub Action adapter
-        uses: Ventairy/smf-action@988c687004c9ef9304d4b4fcb45c7d3c8446a24c
+        uses: Ventairy/smf-action@b5a613feda6e78c58d1b5c8a01da0c8ca6a4d0bf
         with:
           phase: pull-request
           smf-path: smf

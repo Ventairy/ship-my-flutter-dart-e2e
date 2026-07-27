@@ -7,7 +7,43 @@ environment:
   sdk: ">=3.10.0 <4.0.0"
 
 dev_dependencies:
-  smf:
+  smf_apple:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: cf826cb13267a4795b036b28c4168e4c56c34287
+      ref: 1e3d02926d4efa317744ddeb885abe68022e92f2
+      path: packages/smf_apple
+  smf_cli:
+    git:
+      url: https://github.com/Ventairy/smf.git
+      ref: 1e3d02926d4efa317744ddeb885abe68022e92f2
+      path: packages/smf_cli
+  smf_engine:
+    git:
+      url: https://github.com/Ventairy/smf.git
+      ref: 1e3d02926d4efa317744ddeb885abe68022e92f2
+      path: packages/smf_engine
+  smf_hooks:
+    git:
+      url: https://github.com/Ventairy/smf.git
+      ref: 1e3d02926d4efa317744ddeb885abe68022e92f2
+      path: packages/smf_hooks
+
+# The fixture exercises an unreleased workspace commit. These overrides keep
+# internal hosted constraints on that same immutable Git revision until the
+# first independent pub.dev packages exist.
+dependency_overrides:
+  smf_apple:
+    git:
+      url: https://github.com/Ventairy/smf.git
+      ref: 1e3d02926d4efa317744ddeb885abe68022e92f2
+      path: packages/smf_apple
+  smf_engine:
+    git:
+      url: https://github.com/Ventairy/smf.git
+      ref: 1e3d02926d4efa317744ddeb885abe68022e92f2
+      path: packages/smf_engine
+  smf_hooks:
+    git:
+      url: https://github.com/Ventairy/smf.git
+      ref: 1e3d02926d4efa317744ddeb885abe68022e92f2
+      path: packages/smf_hooks

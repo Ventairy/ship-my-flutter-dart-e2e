@@ -129,12 +129,39 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
-  smf:
+  smf_apple:
     dependency: "direct dev"
     description:
-      path: "."
-      ref: cf826cb13267a4795b036b28c4168e4c56c34287
-      resolved-ref: cf826cb13267a4795b036b28c4168e4c56c34287
+      path: "packages/smf_apple"
+      ref: "1e3d02926d4efa317744ddeb885abe68022e92f2"
+      resolved-ref: "1e3d02926d4efa317744ddeb885abe68022e92f2"
+      url: "https://github.com/Ventairy/smf.git"
+    source: git
+    version: "0.1.0"
+  smf_cli:
+    dependency: "direct dev"
+    description:
+      path: "packages/smf_cli"
+      ref: "1e3d02926d4efa317744ddeb885abe68022e92f2"
+      resolved-ref: "1e3d02926d4efa317744ddeb885abe68022e92f2"
+      url: "https://github.com/Ventairy/smf.git"
+    source: git
+    version: "0.1.0"
+  smf_engine:
+    dependency: "direct dev"
+    description:
+      path: "packages/smf_engine"
+      ref: "1e3d02926d4efa317744ddeb885abe68022e92f2"
+      resolved-ref: "1e3d02926d4efa317744ddeb885abe68022e92f2"
+      url: "https://github.com/Ventairy/smf.git"
+    source: git
+    version: "0.1.0"
+  smf_hooks:
+    dependency: "direct dev"
+    description:
+      path: "packages/smf_hooks"
+      ref: "1e3d02926d4efa317744ddeb885abe68022e92f2"
+      resolved-ref: "1e3d02926d4efa317744ddeb885abe68022e92f2"
       url: "https://github.com/Ventairy/smf.git"
     source: git
     version: "0.1.0"
