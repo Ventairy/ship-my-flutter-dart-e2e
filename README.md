@@ -3,8 +3,8 @@
 This disposable repository exercises the public Dart CLI and the thin GitHub
 Action adapter against a real hosted repository.
 
-It intentionally does not run the TestFlight candidate or App Store promotion
-phases. No Apple credentials belong here.
+It intentionally does not run the `release-candidate` or `ship` phases. No
+Apple credentials belong here.
 
 The Ventairy organization locks the default workflow token to read-only, so the
 fixture exercised `github-token`, the documented GitHub App or narrowly scoped
@@ -17,14 +17,14 @@ Verified artifacts:
 - [iOS v1.1.0 GitHub Release](https://github.com/Ventairy/ship-my-flutter-dart-e2e/releases/tag/ios-v1.1.0)
 
 The current hosted non-Apple gate pins core commit
-`4343a9f2eed4801c634b2b95c2da792f6deaac8a` and Action commit
-`b278ca5ee59feab1e5b76de25db23c1d2db735b7`. These immutable references make
+`0fbabbde78343185e7936575021ebabff6377c8a` and Action commit
+`1fa5a0b7c4c814b47b9ecdd49ed45ec782e15a95`. These immutable references make
 the verified pair reproducible without implying that pub.dev or the floating
 `v1` Action tag has been published.
 
-The fixture uses schema-v2 snake_case YAML, includes `.fvmrc`, and deliberately
+The fixture uses schema-v1 snake_case YAML, includes `.fvmrc`, and deliberately
 omits `build_command` and `ipa_output_path`. Its reusable Dart API check proves
 that the default resolves to `fvm flutter build ipa --release`. The hosted
-workflow does not install Flutter: only the non-Apple `plan` phase runs,
+workflow does not install Flutter: only the non-Apple `pull-request` phase runs,
 proving that the Action's isolated Dart runtime does not impose a Flutter SDK
-on planning jobs.
+on pull-request jobs.
