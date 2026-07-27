@@ -133,8 +133,8 @@ packages:
     dependency: "direct dev"
     description:
       path: "."
-      ref: "7fa60bfff690b78a9e049e0c277ca8a12358e91b"
-      resolved-ref: "7fa60bfff690b78a9e049e0c277ca8a12358e91b"
+      ref: cf826cb13267a4795b036b28c4168e4c56c34287
+      resolved-ref: cf826cb13267a4795b036b28c4168e4c56c34287
       url: "https://github.com/Ventairy/smf.git"
     source: git
     version: "0.1.0"

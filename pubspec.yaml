@@ -10,4 +10,4 @@ dev_dependencies:
   smf:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: 7fa60bfff690b78a9e049e0c277ca8a12358e91b
+      ref: cf826cb13267a4795b036b28c4168e4c56c34287
