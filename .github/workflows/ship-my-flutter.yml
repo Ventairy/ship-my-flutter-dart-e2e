@@ -37,7 +37,7 @@ jobs:
 
       - id: ship
         name: Exercise the thin GitHub Action adapter
-        uses: Ventairy/ship-my-flutter-action@2d55e0ee789251388bd457b75ca52c73a5cc2ab2
+        uses: Ventairy/ship-my-flutter-action@73bbc81cec8b177e6c120e799e7ede656566b3a1
         with:
           phase: plan
 
