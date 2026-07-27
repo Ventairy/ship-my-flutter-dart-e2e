@@ -5,9 +5,9 @@
       "releases": {
         "1.2.0": {
           "version": "1.2.0",
-          "preparedAt": "2026-07-27T04:11:53.832768Z",
+          "preparedAt": "2026-07-27T04:13:38.543960Z",
           "baseSha": "842fe97465c19728b5795a751f36a1d0f75ba011",
-          "headSha": "3c8fcbcbfc08595e323a84f3061b7b0c61b8ecd8",
+          "headSha": "545de90358bff9f9212aa29b6aea042d2b24f66c",
           "changes": [
             {
               "sha": "3c8fcbcbfc08595e323a84f3061b7b0c61b8ecd8",
@@ -17,6 +17,18 @@
               "body": null,
               "breaking": false,
               "bump": "minor",
+              "platforms": [
+                "ios"
+              ]
+            },
+            {
+              "sha": "545de90358bff9f9212aa29b6aea042d2b24f66c",
+              "type": "fix",
+              "scope": "ios",
+              "description": "refresh SMF release pull request",
+              "body": null,
+              "breaking": false,
+              "bump": "patch",
               "platforms": [
                 "ios"
               ]
