@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "platforms": {
+    "ios": {
+      "releases": {}
+    },
+    "android": {
+      "releases": {
+        "2.0.1": {
+          "version": "2.0.1",
+          "preparedAt": "2026-07-27T20:14:17.591231Z",
+          "baseSha": "4876dad952f905ae2333b966d8d0fb60f0f61a19",
+          "headSha": "93f84338a4d07f93e76bdd9e7a632988e737c33d",
+          "changes": [
+            {
+              "sha": "93f84338a4d07f93e76bdd9e7a632988e737c33d",
+              "type": "fix",
+              "scope": "android",
+              "description": "update driver navigation",
+              "body": null,
+              "breaking": false,
+              "bump": "patch",
+              "platforms": [
+                "android"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
