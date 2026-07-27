@@ -10,4 +10,4 @@ dev_dependencies:
   ship_my_flutter:
     git:
       url: https://github.com/Ventairy/ship-my-flutter.git
-      ref: 4135293993f69c93c59ef959eb38676d7ef7254e
+      ref: 065eebe9fa8ce92ac2b0adb18e0d1220acb658f8

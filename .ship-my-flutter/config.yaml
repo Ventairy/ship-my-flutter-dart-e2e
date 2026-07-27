@@ -8,6 +8,7 @@ hooks: {}
 platforms:
   ios:
     enabled: true
+    initial_version: 1.0.0
     bundle_id: "com.example.shipmyfluttere2e"
     testflight:
       groups: []
