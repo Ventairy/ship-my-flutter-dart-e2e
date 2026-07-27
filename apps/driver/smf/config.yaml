@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Ventairy/smf/main/packages/smf_engine/schemas/config.schema.json
+
+schema_version: 2
+app_id: "driver"
+target_branch: e2e/monorepo-20260727
+platforms:
+  android:
+    enabled: true
+    initial_version: 2.0.0
+    package_name: "com.ventairy.smf.e2e.driver"
+    google_play:
+      testing_track: internal
+      production_track: production
+      mode: upload
