@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "platforms": {
+    "ios": {
+      "releases": {
+        "1.1.0": {
+          "version": "1.1.0",
+          "preparedAt": "2026-07-27T02:07:23.872573Z",
+          "baseSha": "52407170466ab74f2dd34e73f65b90c6195d0138",
+          "headSha": "dc73ebd6f604522e8f7a1c623b69b5fd87414613",
+          "changes": [
+            {
+              "sha": "e61ce7f5dd8d7ed1d6955724f42cdf1dfaf52b2b",
+              "type": "feat",
+              "scope": "ios",
+              "description": "exercise release pull request",
+              "body": null,
+              "breaking": false,
+              "bump": "minor",
+              "platforms": [
+                "ios"
+              ]
+            },
+            {
+              "sha": "d7eaebeece2fa4c7ffbdb575b2017597aa287c59",
+              "type": "fix",
+              "scope": "ios",
+              "description": "update pending release",
+              "body": null,
+              "breaking": false,
+              "bump": "patch",
+              "platforms": [
+                "ios"
+              ]
+            },
+            {
+              "sha": "d02fac18eac9582ae48b10dc4c1ef892c1312fc1",
+              "type": "fix",
+              "scope": null,
+              "description": "pin the exact Action commit",
+              "body": null,
+              "breaking": false,
+              "bump": "patch",
+              "platforms": [
+                "ios"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
