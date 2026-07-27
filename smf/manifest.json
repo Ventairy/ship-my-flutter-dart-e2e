@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "platforms": {
+    "ios": {
+      "version": "1.2.0",
+      "baselineSha": "75ecf432c03c9c60fa83479cda94b12ad695c1e2",
+      "pendingRelease": true
+    }
+  }
+}

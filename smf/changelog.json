@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "platforms": {
+    "ios": {
+      "releases": {
+        "1.2.0": {
+          "version": "1.2.0",
+          "preparedAt": "2026-07-27T04:11:53.832768Z",
+          "baseSha": "842fe97465c19728b5795a751f36a1d0f75ba011",
+          "headSha": "3c8fcbcbfc08595e323a84f3061b7b0c61b8ecd8",
+          "changes": [
+            {
+              "sha": "3c8fcbcbfc08595e323a84f3061b7b0c61b8ecd8",
+              "type": "feat",
+              "scope": "ios",
+              "description": "verify SMF release pull request",
+              "body": null,
+              "breaking": false,
+              "bump": "minor",
+              "platforms": [
+                "ios"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
