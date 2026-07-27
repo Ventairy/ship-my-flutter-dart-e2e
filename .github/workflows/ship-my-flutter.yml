@@ -37,9 +37,9 @@ jobs:
 
       - id: ship
         name: Exercise the thin GitHub Action adapter
-        uses: Ventairy/ship-my-flutter-action@b278ca5ee59feab1e5b76de25db23c1d2db735b7
+        uses: Ventairy/ship-my-flutter-action@1fa5a0b7c4c814b47b9ecdd49ed45ec782e15a95
         with:
-          phase: plan
+          phase: pull-request
           github-token: ${{ secrets.SHIP_MY_FLUTTER_GITHUB_TOKEN }}
 
       - name: Record the decision without invoking Apple
@@ -56,5 +56,5 @@ jobs:
             printf -- '- version: `%s`\n' "$VERSION"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      # This fixture intentionally has no candidate or promote job. Those
+      # This fixture intentionally has no release-candidate or ship job. Those
       # phases touch App Store Connect and are outside this repository's scope.
