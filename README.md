@@ -24,7 +24,7 @@ the default `commitChanges == true` behavior.
 
 Verified hosted artifacts:
 
-- [non-Apple composite Action run](https://github.com/Ventairy/smf-e2e/actions/runs/30236365149);
+- [non-Apple composite Action run](https://github.com/Ventairy/smf-e2e/actions/runs/30266466849);
 - [iOS 1.2.0 release PR](https://github.com/Ventairy/smf-e2e/pull/3).
 
 PR #3 was opened on `smf/ios`. A later `fix(ios)` commit refreshed the same PR
@@ -33,6 +33,6 @@ the higher minor bump.
 
 The organization fixes the default workflow token to read-only. The hosted
 manual workflow therefore verifies the composite Action's setup and no-op path,
-while the release-PR mutation is exercised from the same built Action adapter
-using a local authenticated GitHub session. No token is stored in this
-repository, and no Apple or release-signing credentials belong here.
+while release-PR mutation is exercised through the same final public core using
+a local authenticated GitHub session. No token is stored in this repository,
+and no Apple or release-signing credentials belong here.
