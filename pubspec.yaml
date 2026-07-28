@@ -10,27 +10,27 @@ dev_dependencies:
   smf_android:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: 2404e3f00329c1a0a7a618f1d791f0f2255ea64b
+      ref: 977ff9d7ad140e3331c7af6b6efd5bf06494fcb3
       path: packages/smf_android
   smf_apple:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: 2404e3f00329c1a0a7a618f1d791f0f2255ea64b
+      ref: 977ff9d7ad140e3331c7af6b6efd5bf06494fcb3
       path: packages/smf_apple
   smf_cli:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: 2404e3f00329c1a0a7a618f1d791f0f2255ea64b
+      ref: 977ff9d7ad140e3331c7af6b6efd5bf06494fcb3
       path: packages/smf_cli
   smf_engine:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: 2404e3f00329c1a0a7a618f1d791f0f2255ea64b
+      ref: 977ff9d7ad140e3331c7af6b6efd5bf06494fcb3
       path: packages/smf_engine
   smf_hooks:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: 2404e3f00329c1a0a7a618f1d791f0f2255ea64b
+      ref: 977ff9d7ad140e3331c7af6b6efd5bf06494fcb3
       path: packages/smf_hooks
 
 # The fixture exercises an unreleased workspace commit. These overrides keep
@@ -40,20 +40,20 @@ dependency_overrides:
   smf_android:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: 2404e3f00329c1a0a7a618f1d791f0f2255ea64b
+      ref: 977ff9d7ad140e3331c7af6b6efd5bf06494fcb3
       path: packages/smf_android
   smf_apple:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: 2404e3f00329c1a0a7a618f1d791f0f2255ea64b
+      ref: 977ff9d7ad140e3331c7af6b6efd5bf06494fcb3
       path: packages/smf_apple
   smf_engine:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: 2404e3f00329c1a0a7a618f1d791f0f2255ea64b
+      ref: 977ff9d7ad140e3331c7af6b6efd5bf06494fcb3
       path: packages/smf_engine
   smf_hooks:
     git:
       url: https://github.com/Ventairy/smf.git
-      ref: 2404e3f00329c1a0a7a618f1d791f0f2255ea64b
+      ref: 977ff9d7ad140e3331c7af6b6efd5bf06494fcb3
       path: packages/smf_hooks
