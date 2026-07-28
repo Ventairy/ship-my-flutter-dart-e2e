@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "platforms": {
+    "ios": {
+      "releases": {
+        "1.2.0": {
+          "version": "1.2.0",
+          "preparedAt": "2026-07-28T17:01:20.095356Z",
+          "baseSha": "75ecf432c03c9c60fa83479cda94b12ad695c1e2",
+          "headSha": "9af6739d85c4cd8725b36618444bca4f9d73e80e",
+          "changes": [
+            {
+              "sha": "3c8fcbcbfc08595e323a84f3061b7b0c61b8ecd8",
+              "type": "feat",
+              "scope": "ios",
+              "description": "verify SMF release pull request",
+              "body": null,
+              "breaking": false,
+              "versionBump": "minor",
+              "platforms": [
+                "ios"
+              ]
+            },
+            {
+              "sha": "545de90358bff9f9212aa29b6aea042d2b24f66c",
+              "type": "fix",
+              "scope": "ios",
+              "description": "refresh SMF release pull request",
+              "body": null,
+              "breaking": false,
+              "versionBump": "patch",
+              "platforms": [
+                "ios"
+              ]
+            },
+            {
+              "sha": "0434c6fffebefc8fdb8e85e84bb900a19abb6a14",
+              "type": "feat",
+              "scope": null,
+              "description": "verify platform-filtered phased CLI",
+              "body": null,
+              "breaking": false,
+              "versionBump": "minor",
+              "platforms": [
+                "ios",
+                "android"
+              ]
+            },
+            {
+              "sha": "a64c6a1932d02d5a08d81340517a32aaaf4ce8f2",
+              "type": "fix",
+              "scope": null,
+              "description": "use the workflow token for hosted verification",
+              "body": null,
+              "breaking": false,
+              "versionBump": "patch",
+              "platforms": [
+                "ios",
+                "android"
+              ]
+            },
+            {
+              "sha": "9441ce6e2c242ff330ed42aefe3bcac840bce6fc",
+              "type": "fix",
+              "scope": null,
+              "description": "prepare the fixture hook toolchain",
+              "body": null,
+              "breaking": false,
+              "versionBump": "patch",
+              "platforms": [
+                "ios",
+                "android"
+              ]
+            },
+            {
+              "sha": "db20cf58f7f5bee3f648a189b3d4a2aa5000646d",
+              "type": "fix",
+              "scope": null,
+              "description": "ignore the local FVM installation",
+              "body": null,
+              "breaking": false,
+              "versionBump": "patch",
+              "platforms": [
+                "ios",
+                "android"
+              ]
+            },
+            {
+              "sha": "9af6739d85c4cd8725b36618444bca4f9d73e80e",
+              "type": "fix",
+              "scope": null,
+              "description": "keep FVM setup byte-clean",
+              "body": null,
+              "breaking": false,
+              "versionBump": "patch",
+              "platforms": [
+                "ios",
+                "android"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "android": {
+      "releases": {}
+    }
+  }
+}
