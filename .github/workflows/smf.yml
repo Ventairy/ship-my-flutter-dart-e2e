@@ -30,29 +30,37 @@ jobs:
       - name: Exercise the CLI and reusable Dart API
         run: |
           dart run smf_cli:smf validate
-          dart run smf_cli:smf plan
-          dart run smf_cli:smf open-pr --help
+          dart run smf_cli:smf --phase pull-request --help
+          dart run smf_cli:smf --phase release-candidate --platform ios --help
           dart run example/custom_workflow.dart
 
       - id: ship
         name: Exercise the thin GitHub Action adapter
-        uses: Ventairy/smf-action@b5a613feda6e78c58d1b5c8a01da0c8ca6a4d0bf
+        uses: Ventairy/smf-action@4e89338e75f44d2bdfe845a5133efd58aeb10d0d
         with:
           phase: pull-request
+          platform: ios
           smf-path: smf
+          github-token: ${{ secrets.SHIP_MY_FLUTTER_GITHUB_TOKEN }}
 
       - name: Record the decision without invoking Apple
         env:
           PHASE: ${{ steps.ship.outputs.phase }}
           BRANCH: ${{ steps.ship.outputs.branch }}
           VERSION: ${{ steps.ship.outputs.version }}
+          RELEASES: ${{ steps.ship.outputs.releases }}
         run: |
-          printf 'phase=%s\nbranch=%s\nversion=%s\n' "$PHASE" "$BRANCH" "$VERSION"
+          printf 'phase=%s\nbranch=%s\nversion=%s\nreleases=%s\n' "$PHASE" "$BRANCH" "$VERSION" "$RELEASES"
+          if [[ "$PHASE" != "release-candidate" || "$RELEASES" != *'"platform":"ios"'* || "$RELEASES" == *'"platform":"android"'* ]]; then
+            printf 'Unexpected platform-filtered result.\n' >&2
+            exit 1
+          fi
           {
             printf '## SMF decision\n\n'
             printf -- '- phase: `%s`\n' "$PHASE"
             printf -- '- branch: `%s`\n' "$BRANCH"
             printf -- '- version: `%s`\n' "$VERSION"
+            printf -- '- releases: `%s`\n' "$RELEASES"
           } >> "$GITHUB_STEP_SUMMARY"
 
       # This fixture intentionally has no release-candidate or ship job. Those

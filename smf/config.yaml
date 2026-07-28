@@ -1,9 +1,20 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Ventairy/smf/main/packages/smf_engine/schemas/config.schema.json
 
 schema_version: 1
-target_branch: main
+app_id: phased-cli-e2e
+target_branch: agent/phased-cli-e2e
 platforms:
   ios:
+    enabled: true
     initial_version: 1.1.1
+    bundle_id: dev.ventairy.smf_e2e
     app_store:
-      mode: upload
+      release_candidate:
+        target: internal-testing
+  android:
+    enabled: true
+    initial_version: 1.0.0
+    package_name: dev.ventairy.smf_e2e
+    google_play:
+      release_candidate:
+        target: internal-testing

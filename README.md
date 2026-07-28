@@ -10,8 +10,8 @@ building, uploading, or submitting anything to Apple.
 
 The fixture pins immutable sources:
 
-- SMF workspace `1e3d02926d4efa317744ddeb885abe68022e92f2`;
-- SMF Action `b5a613feda6e78c58d1b5c8a01da0c8ca6a4d0bf`.
+- SMF workspace `2404e3f00329c1a0a7a618f1d791f0f2255ea64b`;
+- SMF Action `4e89338e75f44d2bdfe845a5133efd58aeb10d0d`.
 
 The Flutter-app-shaped project keeps its only configuration at
 `smf/config.yaml`. Both the CLI and Action discover it automatically from the
