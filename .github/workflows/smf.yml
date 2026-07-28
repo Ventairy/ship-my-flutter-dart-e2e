@@ -47,7 +47,11 @@ jobs:
           fvm-root: ${{ steps.project.outputs.fvm-root }}
 
       - name: Verify toolchain setup kept the fixture clean
-        run: git status --porcelain=v1 --untracked-files=all
+        run: |
+          if [[ -n "$(git status --porcelain=v1 --untracked-files=all)" ]]; then
+            git status --porcelain=v1 --untracked-files=all
+            exit 1
+          fi
 
       - id: ship
         name: Exercise the thin GitHub Action adapter
