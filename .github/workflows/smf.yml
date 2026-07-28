@@ -34,6 +34,18 @@ jobs:
           dart run smf_cli:smf --phase release-candidate --platform ios --help
           dart run example/custom_workflow.dart
 
+      - id: project
+        uses: Ventairy/smf-action/resolve-project@4e89338e75f44d2bdfe845a5133efd58aeb10d0d
+        with:
+          smf-path: smf
+
+      - if: steps.project.outputs.has-before-create-hook == 'true'
+        uses: Ventairy/smf-action/setup-flutter@4e89338e75f44d2bdfe845a5133efd58aeb10d0d
+        with:
+          app-path: ${{ steps.project.outputs.app-path }}
+          uses-fvm: ${{ steps.project.outputs.uses-fvm }}
+          fvm-root: ${{ steps.project.outputs.fvm-root }}
+
       - id: ship
         name: Exercise the thin GitHub Action adapter
         uses: Ventairy/smf-action@4e89338e75f44d2bdfe845a5133efd58aeb10d0d
