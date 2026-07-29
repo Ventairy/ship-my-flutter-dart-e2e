@@ -1,15 +1,15 @@
 {
-  "schemaVersion": 1,
   "platforms": {
     "ios": {
       "version": "1.2.0",
-      "baselineSha": "75ecf432c03c9c60fa83479cda94b12ad695c1e2",
-      "pendingRelease": true
+      "endCommitHash": "d5d9251780337d4a2f5d48054229580e4dba8615",
+      "isReleasePending": true
     },
     "android": {
       "version": "1.0.0",
-      "baselineSha": "75ecf432c03c9c60fa83479cda94b12ad695c1e2",
-      "pendingRelease": false
+      "endCommitHash": "75ecf432c03c9c60fa83479cda94b12ad695c1e2",
+      "isReleasePending": false
     }
-  }
+  },
+  "schemaVersion": 1
 }
