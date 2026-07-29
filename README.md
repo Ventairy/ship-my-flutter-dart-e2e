@@ -10,8 +10,8 @@ building, uploading, or submitting anything to Apple.
 
 The fixture pins immutable releases:
 
-- hosted `smf_cli` at `1.0.1` and `smf_engine` and `smf_hooks` at `1.0.0`;
-- SMF Action commit `e17f86ccbeec249e2d9b99bd83ef75dff597c628`.
+- hosted `smf_cli` and `smf_engine` at `1.0.1` and `smf_hooks` at `1.0.0`;
+- SMF Action commit `eec07aab9088c47e7f171b45539c41d452fb87be`.
 
 The Flutter-app-shaped project keeps its only configuration at
 `smf/config.yaml`. Both the CLI and Action discover it automatically from the
