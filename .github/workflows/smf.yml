@@ -38,12 +38,12 @@ jobs:
           dart run example/custom_workflow.dart
 
       - id: project
-        uses: Ventairy/smf-action/resolve-project@310736b8f7292432f99f394da7b3df23cd4dc8b1
+        uses: Ventairy/smf-action/resolve-project@e4be464b4a8a9b4f0104851650f3a4d271cba048
         with:
           smf-path: smf
 
       - if: steps.project.outputs.has-before-create-hook == 'true'
-        uses: Ventairy/smf-action/setup-flutter@310736b8f7292432f99f394da7b3df23cd4dc8b1
+        uses: Ventairy/smf-action/setup-flutter@e4be464b4a8a9b4f0104851650f3a4d271cba048
         with:
           app-path: ${{ steps.project.outputs.app-path }}
           uses-fvm: ${{ steps.project.outputs.uses-fvm }}
@@ -58,7 +58,7 @@ jobs:
 
       - id: plan
         name: Exercise the thin GitHub Action adapter
-        uses: Ventairy/smf-action@310736b8f7292432f99f394da7b3df23cd4dc8b1
+        uses: Ventairy/smf-action@e4be464b4a8a9b4f0104851650f3a4d271cba048
         with:
           phase: pull-request
           platform: ios
