@@ -173,10 +173,10 @@ packages:
     dependency: "direct dev"
     description:
       name: smf_cli
-      sha256: d7d462380e5e923a5de2064e7b2e7402d2dc48fc312135b1ada2f158958e0d2d
+      sha256: "6859dffcc818da9c59b2b1a347854b255382b16e2eee894e370ea2288bd963ed"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.1"
   smf_engine:
     dependency: "direct dev"
     description:

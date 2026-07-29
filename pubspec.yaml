@@ -7,6 +7,6 @@ environment:
   sdk: ">=3.10.0 <4.0.0"
 
 dev_dependencies:
-  smf_cli: 1.0.0
+  smf_cli: 1.0.1
   smf_engine: 1.0.0
   smf_hooks: 1.0.0
