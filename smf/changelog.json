@@ -4,9 +4,9 @@
       "releases": [
         {
           "version": "1.2.0",
-          "preparedAt": "2026-07-29T03:49:12.133702Z",
+          "preparedAt": "2026-07-29T04:04:54.440066Z",
           "baseCommitHash": "75ecf432c03c9c60fa83479cda94b12ad695c1e2",
-          "endCommitHash": "d5d9251780337d4a2f5d48054229580e4dba8615",
+          "endCommitHash": "bb8f90eeb56e4edca91e71dc4a8b71dac15a2dd5",
           "changes": [
             {
               "commitHash": "3c8fcbcbfc08595e323a84f3061b7b0c61b8ecd8",

@@ -2,7 +2,7 @@
   "platforms": {
     "ios": {
       "version": "1.2.0",
-      "endCommitHash": "d5d9251780337d4a2f5d48054229580e4dba8615",
+      "endCommitHash": "bb8f90eeb56e4edca91e71dc4a8b71dac15a2dd5",
       "isReleasePending": true
     },
     "android": {
