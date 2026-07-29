@@ -169,51 +169,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
-  smf_android:
-    dependency: "direct dev"
-    description:
-      path: "packages/smf_android"
-      ref: "977ff9d7ad140e3331c7af6b6efd5bf06494fcb3"
-      resolved-ref: "977ff9d7ad140e3331c7af6b6efd5bf06494fcb3"
-      url: "https://github.com/Ventairy/smf.git"
-    source: git
-    version: "0.1.0"
-  smf_apple:
-    dependency: "direct dev"
-    description:
-      path: "packages/smf_apple"
-      ref: "977ff9d7ad140e3331c7af6b6efd5bf06494fcb3"
-      resolved-ref: "977ff9d7ad140e3331c7af6b6efd5bf06494fcb3"
-      url: "https://github.com/Ventairy/smf.git"
-    source: git
-    version: "0.1.0"
   smf_cli:
     dependency: "direct dev"
     description:
-      path: "packages/smf_cli"
-      ref: "977ff9d7ad140e3331c7af6b6efd5bf06494fcb3"
-      resolved-ref: "977ff9d7ad140e3331c7af6b6efd5bf06494fcb3"
-      url: "https://github.com/Ventairy/smf.git"
-    source: git
-    version: "0.1.0"
+      name: smf_cli
+      sha256: d7d462380e5e923a5de2064e7b2e7402d2dc48fc312135b1ada2f158958e0d2d
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   smf_engine:
     dependency: "direct dev"
     description:
-      path: "packages/smf_engine"
-      ref: "977ff9d7ad140e3331c7af6b6efd5bf06494fcb3"
-      resolved-ref: "977ff9d7ad140e3331c7af6b6efd5bf06494fcb3"
-      url: "https://github.com/Ventairy/smf.git"
-    source: git
-    version: "0.1.0"
+      name: smf_engine
+      sha256: "8d14dfe257ea897131587444132508e4b966220c27d9b7a950203c4042f6e29a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   smf_hooks:
     dependency: "direct dev"
     description:
-      path: "packages/smf_hooks"
-      ref: "977ff9d7ad140e3331c7af6b6efd5bf06494fcb3"
-      resolved-ref: "977ff9d7ad140e3331c7af6b6efd5bf06494fcb3"
-      url: "https://github.com/Ventairy/smf.git"
-    source: git
-    version: "0.1.0"
+      name: smf_hooks
+      sha256: "3d489f6c136c3befb666b6a0ab862411ed57c98e61d76ec79339d8cb43bd28da"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   source_span:
     dependency: transitive
     description:

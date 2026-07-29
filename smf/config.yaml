@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Ventairy/smf/main/packages/smf_engine/schemas/config.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Ventairy/smf/smf_engine-v1.0.0/packages/smf_engine/schemas/config.schema.json
 
 schema_version: 1
 app_id: phased-cli-e2e

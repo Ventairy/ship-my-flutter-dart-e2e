@@ -8,10 +8,10 @@ configuration discovery, CLI commands, the reusable Dart API, the typed
 `before_create_pr` hook, release-branch updates, and release-PR creation without
 building, uploading, or submitting anything to Apple.
 
-The fixture pins immutable sources:
+The fixture pins immutable releases:
 
-- SMF workspace `977ff9d7ad140e3331c7af6b6efd5bf06494fcb3`;
-- SMF Action `56c58eef3b94303697ac9474c8fccabb67ac588b`.
+- hosted `smf_cli`, `smf_engine`, and `smf_hooks` packages at `1.0.0`;
+- SMF Action commit `310736b8f7292432f99f394da7b3df23cd4dc8b1`.
 
 The Flutter-app-shaped project keeps its only configuration at
 `smf/config.yaml`. Both the CLI and Action discover it automatically from the
@@ -22,17 +22,11 @@ The typed hook at `smf/hooks/before_create_pr.dart` writes `smf/hook-result.txt`
 on the release branch. SMF commits that hook output to the release PR, proving
 the default `commitChanges == true` behavior.
 
-Verified hosted artifacts:
+The hosted workflow validates the exact hosted Dart dependency graph, the
+public CLI, iOS and Android library entrypoints, the hook protocol, project
+resolution, and a real authenticated update of the single iOS release PR. It
+also asserts the phase-specific Action output contract.
 
-- [non-Apple composite Action run](https://github.com/Ventairy/smf-e2e/actions/runs/30266466849);
-- [iOS 1.2.0 release PR](https://github.com/Ventairy/smf-e2e/pull/3).
-
-PR #3 was opened on `smf/ios`. A later `fix(ios)` commit refreshed the same PR
-and retained version 1.2.0 because the existing `feat(ios)` already selected
-the higher minor bump.
-
-The organization fixes the default workflow token to read-only. The hosted
-manual workflow therefore verifies the composite Action's setup and no-op path,
-while release-PR mutation is exercised through the same final public engine using
-a local authenticated GitHub session. No token is stored in this repository,
-and no Apple or release-signing credentials belong here.
+The repository stores no Apple, Google Play, or signing credentials. Candidate
+upload and shipping therefore remain external acceptance gates rather than
+fixture behavior.
