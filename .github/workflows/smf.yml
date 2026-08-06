@@ -37,11 +37,6 @@ jobs:
           dart run smf_cli:smf release --phase ship --platform android --help
           dart run example/custom_workflow.dart
 
-      - name: Exercise phase-scoped hook secrets
-        env:
-          E2E_HOOK_SECRET: ${{ secrets.E2E_HOOK_SECRET }}
-        run: dart run example/hook_secret_e2e.dart
-
       - id: project
         uses: Ventairy/smf-action/resolve-project@bf363393ca40828693d17f2f1cc1fd4073b6c601
         with:
@@ -53,6 +48,11 @@ jobs:
           app-path: ${{ steps.project.outputs.app-path }}
           uses-fvm: ${{ steps.project.outputs.uses-fvm }}
           fvm-root: ${{ steps.project.outputs.fvm-root }}
+
+      - name: Exercise phase-scoped hook secrets
+        env:
+          E2E_HOOK_SECRET: ${{ secrets.E2E_HOOK_SECRET }}
+        run: dart run example/hook_secret_e2e.dart
 
       - name: Verify toolchain setup kept the fixture clean
         run: |
