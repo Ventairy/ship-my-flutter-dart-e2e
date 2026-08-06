@@ -172,27 +172,30 @@ packages:
   smf_cli:
     dependency: "direct dev"
     description:
-      name: smf_cli
-      sha256: "6859dffcc818da9c59b2b1a347854b255382b16e2eee894e370ea2288bd963ed"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.1"
+      path: "packages/smf_cli"
+      ref: "2abbe6789dda462fd66a8269c1ed9c3690f72a3d"
+      resolved-ref: "2abbe6789dda462fd66a8269c1ed9c3690f72a3d"
+      url: "https://github.com/Ventairy/smf.git"
+    source: git
+    version: "1.0.4"
   smf_engine:
     dependency: "direct dev"
     description:
-      name: smf_engine
-      sha256: "39442bae0c2b0b8094cb00c4e75738e72af3303e20eae66ddc06bc448b0ecf93"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.2"
+      path: "packages/smf_engine"
+      ref: "2abbe6789dda462fd66a8269c1ed9c3690f72a3d"
+      resolved-ref: "2abbe6789dda462fd66a8269c1ed9c3690f72a3d"
+      url: "https://github.com/Ventairy/smf.git"
+    source: git
+    version: "1.0.4"
   smf_hooks:
     dependency: "direct dev"
     description:
-      name: smf_hooks
-      sha256: "3d489f6c136c3befb666b6a0ab862411ed57c98e61d76ec79339d8cb43bd28da"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
+      path: "packages/smf_hooks"
+      ref: "2abbe6789dda462fd66a8269c1ed9c3690f72a3d"
+      resolved-ref: "2abbe6789dda462fd66a8269c1ed9c3690f72a3d"
+      url: "https://github.com/Ventairy/smf.git"
+    source: git
+    version: "1.0.4"
   source_span:
     dependency: transitive
     description:

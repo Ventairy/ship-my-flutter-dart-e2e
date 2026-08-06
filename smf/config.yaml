@@ -1,8 +1,12 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Ventairy/smf/smf_engine-v1.0.2/packages/smf_engine/schemas/config.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Ventairy/smf/2abbe6789dda462fd66a8269c1ed9c3690f72a3d/packages/smf_engine/schemas/config.schema.json
 
 schema_version: 1
 app_id: phased-cli-e2e
 target_branch: agent/phased-cli-e2e
+hooks:
+  before_create_pr:
+    secrets:
+      - E2E_HOOK_SECRET
 platforms:
   ios:
     enabled: true

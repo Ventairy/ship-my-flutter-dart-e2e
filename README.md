@@ -8,7 +8,16 @@ configuration discovery, CLI commands, the reusable Dart API, the typed
 `before_create_pr` hook, release-branch updates, and release-PR creation without
 building, uploading, or submitting anything to Apple.
 
-The fixture pins immutable releases:
+This branch pins the immutable SMF feature commit
+`2abbe6789dda462fd66a8269c1ed9c3690f72a3d` across `smf_cli`, `smf_engine`,
+and `smf_hooks` through root dependency overrides. The publishable SMF package
+manifests continue to use hosted dependencies.
+
+The hook receives `E2E_HOOK_SECRET` through `context.secrets`, verifies that it
+is available, and records only a non-secret success marker. The workflow value
+comes from the repository's matching GitHub Actions secret.
+
+The baseline fixture pins immutable releases:
 
 - hosted `smf_cli` at `1.0.1`, `smf_engine` at `1.0.2`, and `smf_hooks` at
   `1.0.0`;

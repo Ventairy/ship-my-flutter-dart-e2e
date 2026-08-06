@@ -24,7 +24,7 @@ jobs:
         with:
           sdk: 3.10.0
 
-      - name: Install the public Dart package
+      - name: Install the exact SMF commit
         run: dart pub get --enforce-lockfile
 
       - name: Exercise the CLI and reusable Dart API
@@ -36,6 +36,11 @@ jobs:
           dart run smf_cli:smf release --phase release-candidate --platform ios --help
           dart run smf_cli:smf release --phase ship --platform android --help
           dart run example/custom_workflow.dart
+
+      - name: Exercise phase-scoped hook secrets
+        env:
+          E2E_HOOK_SECRET: ${{ secrets.E2E_HOOK_SECRET }}
+        run: dart run example/hook_secret_e2e.dart
 
       - id: project
         uses: Ventairy/smf-action/resolve-project@bf363393ca40828693d17f2f1cc1fd4073b6c601
