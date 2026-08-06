@@ -17,6 +17,11 @@ The hook receives `E2E_HOOK_SECRET` through `context.secrets`, verifies that it
 is available, and records only a non-secret success marker. The workflow value
 comes from the repository's matching GitHub Actions secret.
 
+After that exact-commit assertion, the workflow removes the unreleased `hooks`
+block from its working copy before exercising the older published Action pin.
+This keeps the baseline Action coverage without asking an already-published CLI
+to parse configuration introduced by the feature commit.
+
 The baseline fixture pins immutable releases:
 
 - hosted `smf_cli` at `1.0.1`, `smf_engine` at `1.0.2`, and `smf_hooks` at

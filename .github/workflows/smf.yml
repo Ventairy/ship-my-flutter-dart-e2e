@@ -61,6 +61,9 @@ jobs:
             exit 1
           fi
 
+      - name: Restore config compatibility for the published Action baseline
+        run: sed -i '/^hooks:/,/^platforms:/{/^platforms:/!d;}' smf/config.yaml
+
       - id: plan
         name: Exercise the thin GitHub Action adapter
         uses: Ventairy/smf-action@bf363393ca40828693d17f2f1cc1fd4073b6c601
