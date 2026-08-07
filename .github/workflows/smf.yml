@@ -38,12 +38,12 @@ jobs:
           dart run example/custom_workflow.dart
 
       - id: project
-        uses: Ventairy/smf-action/resolve-project@bf363393ca40828693d17f2f1cc1fd4073b6c601
+        uses: Ventairy/smf-action/resolve-project@v1
         with:
           smf-path: smf
 
       - if: steps.project.outputs.has-before-create-hook == 'true'
-        uses: Ventairy/smf-action/setup-flutter@bf363393ca40828693d17f2f1cc1fd4073b6c601
+        uses: Ventairy/smf-action/setup-flutter@v1
         with:
           app-path: ${{ steps.project.outputs.app-path }}
           uses-fvm: ${{ steps.project.outputs.uses-fvm }}
@@ -61,12 +61,11 @@ jobs:
             exit 1
           fi
 
-      - name: Restore config compatibility for the published Action baseline
-        run: sed -i '/^hooks:/,/^platforms:/{/^platforms:/!d;}' smf/config.yaml
-
       - id: plan
-        name: Exercise the thin GitHub Action adapter
-        uses: Ventairy/smf-action@bf363393ca40828693d17f2f1cc1fd4073b6c601
+        name: Exercise the released GitHub Action adapter
+        uses: Ventairy/smf-action@v1
+        env:
+          E2E_HOOK_SECRET: ${{ secrets.E2E_HOOK_SECRET }}
         with:
           phase: pull-request
           platform: ios
